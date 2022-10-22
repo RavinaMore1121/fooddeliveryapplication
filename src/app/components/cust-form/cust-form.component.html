@@ -1,0 +1,54 @@
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+            
+            <div *ngIf = "customers.id ==0">  <h2>Add Customer</h2></div>
+            <div *ngIf = "customers.id >0">  <h2>Update Customer</h2></div>
+            <hr>
+
+            <form #spForm="ngForm" (ngSubmit)="onSubmit()">
+                <div class="form-group-row">
+                    <label class="col-sm-2 col-form-label">CustomerName</label>
+                    <input type="text" name="cname" [(ngModel)]="customers.cname"/>
+                </div><br>
+                <div class="form-group-row">
+                    <label class="col-sm-2 col-form-label">Customercontact</label>
+                    <input type="text" name="contact" [(ngModel)]="customers.contact"/>
+                </div><br>
+                <div class="form-group-row">
+                    <label class="col-sm-2 col-form-label">CustomerAddress</label>
+                    <input type="text" name="address" [(ngModel)]="customers.address"/>
+                </div><br>
+                <div class="form-group-row">
+                    <label class="col-sm-2 col-form-label">Orderedfood</label>
+                    <input type="text" name="orderedfood" [(ngModel)]="customers.orderedfood"/>
+                </div><br>
+                <div class="form-group-row">
+                    <label class="col-sm-2 col-form-label">Orderedfoodprise</label>
+                    <input type="text" name="orderedfoodprise" [(ngModel)]="customers.orderedfoodprise"/>
+                </div><br>
+                <div class="form-group-row">
+                    <label class="col-sm-2 col-form-label">Orderdate</label>
+                    <input type="date" name="orderdate" [(ngModel)]="customers.orderdate"/>
+                </div><br>
+                <div class="form-group-row">
+                    <label class="col-sm-2 col-form-label">Placeorder</label>
+                    <input type="time" name="placeorder" [(ngModel)]="customers.placeorder"/>
+                </div><br>
+                <div class="form-group-row">
+                    <label class="col-sm-2 col-form-label">Reachedorder</label>
+                    <input type="time" name="reachedorder" [(ngModel)]="customers.reachedorder"/>
+                </div><br>
+                <div class="form-group-row">
+                    <label class="col-sm-2 col-form-label">Deliveryboyid</label>
+                    <input type="text" name="boyid" [(ngModel)]="customers.boyid"/>
+                </div><br>
+                <div class="form-group-row">
+                    <div class="col-sm-2"><button class="btn btn-info" type="submit">submit</button></div>
+                </div>
+
+            </form>
+            </div>
+            </div>
+            </div>
+            

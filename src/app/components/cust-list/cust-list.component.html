@@ -1,0 +1,51 @@
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+            
+            <div class="row">
+               
+                    <button class="aut-btn-submit btn-info" (click)="addCustomer()">AddCustomer</button>
+                
+               
+              <table class='table'>
+                <thead>
+                    <tr class='table-dark'>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>OrderedFood</th>
+                        <th>OrderdFoodPrise</th>
+                    </tr>
+            
+                </thead>
+                <tr >
+                    <td>01</td>
+                    <td>Pratiksha</td>
+                    <td>biryani</td>
+                    <td>150</td>
+                </tr>
+                
+               
+                
+                <tr *ngFor="let tempCust of customers">
+                    <td>{{tempCust.id}}</td>
+                    <td>{{tempCust.cname}}</td>
+                    <td>{{tempCust.orderedfood}}</td>
+                    <td>{{tempCust.orderedfoodprise}}</td>
+                    <td>
+                        <button type="button" class="btn btn-md btn-info" (click) = "updateCust(tempCust.id)">Update</button>
+                        &nbsp; &nbsp;
+                        <button type="button" class="btn btn-md btn-info"  (click) = "deleteCust(tempCust.id)">Delete </button>
+    
+                       </td>
+                  </tr>
+                  
+            </table>
+            
+            </div>
+           
+            
+
+        </div>
+    
+ </div>
+ </div>
